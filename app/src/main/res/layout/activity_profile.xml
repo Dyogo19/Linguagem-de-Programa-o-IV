@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+
+    <ImageView
+        android:id="@+id/fundatec"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:src="@drawable/fundatec"
+        android:layout_margin="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/TVEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/TVEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:textSize="25sp"
+
+
+        app:layout_constraintBottom_toTopOf="@id/email"
+        app:layout_constraintEnd_toEndOf="@id/fundatec"
+        app:layout_constraintStart_toStartOf="@id/fundatec"
+        app:layout_constraintTop_toBottomOf="@id/fundatec"
+        />
+
+
+
+    <Button
+        android:id="@+id/registrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/registrar"
+        android:layout_margin="40dp"
+        app:layout_constraintTop_toBottomOf="@id/confirmarsenha"
+        app:layout_constraintStart_toStartOf="@id/senha"
+        app:layout_constraintEnd_toEndOf="@+id/senha"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <TextView
+        android:id="@+id/TVSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/senha"
+        android:textSize="25sp"
+
+        app:layout_constraintBottom_toTopOf="@id/senha"
+        app:layout_constraintEnd_toEndOf="@id/email"
+        app:layout_constraintStart_toStartOf="@id/email"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+
+        />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:inputType="textEmailAddress"
+        android:hint="@string/inserirEmail"
+
+        app:layout_constraintTop_toBottomOf="@+id/TVEmail"
+        app:layout_constraintStart_toStartOf="@+id/TVEmail"
+        app:layout_constraintEnd_toEndOf="@id/TVEmail"
+        app:layout_constraintBottom_toTopOf="@id/TVSenha"
+        />
+
+    <TextView
+        android:id="@+id/TVConfimarSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/confirmarSenha"
+        android:textSize="25sp"
+
+        app:layout_constraintTop_toBottomOf="@id/senha"
+        app:layout_constraintEnd_toEndOf="@id/email"
+        app:layout_constraintStart_toStartOf="@id/email"
+        app:layout_constraintBottom_toTopOf="@+id/confirmarsenha"
+
+        />
+    <EditText
+        android:hint="@string/inserirSenha"
+        android:id="@+id/senha"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:inputType="textPassword"
+
+        app:layout_constraintTop_toBottomOf="@+id/TVSenha"
+        app:layout_constraintEnd_toEndOf="@id/TVSenha"
+        app:layout_constraintStart_toStartOf="@id/TVSenha"
+        app:layout_constraintBottom_toTopOf="@+id/TVConfimarSenha"
+        />
+
+    <EditText
+        android:id="@+id/confirmarsenha"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:hint="@string/confirmarSenha"
+        android:inputType="textPassword"
+
+        app:layout_constraintBottom_toTopOf="@+id/registrar"
+        app:layout_constraintEnd_toEndOf="@id/TVConfimarSenha"
+
+        app:layout_constraintStart_toStartOf="@id/TVConfimarSenha"
+        app:layout_constraintTop_toBottomOf="@+id/TVConfimarSenha" />
+</androidx.constraintlayout.widget.ConstraintLayout>

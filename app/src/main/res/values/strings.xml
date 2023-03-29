@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Fundatec Heroes TI21</string>
+    <string name="Qual_nome">Qual é o seu nome?</string>
+    <string name="usuarionovo">Novo Por Aqui?</string>
+    <string name="limpar">LIMPAR</string>
+    <string name="Okay">OK</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="login">Login</string>
+    <string name="inserirSenha">Insira sua senha</string>
+    <string name="inserirEmail">Insira seu email</string>
+    <string name="confirmarSenha">Confirmar Senha</string>
+    <string name="registrar">Registrar</string>
+    <string name="sbv">Seja bem-vindo %s</string>
+</resources>
