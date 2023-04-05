@@ -1,4 +1,4 @@
-package com.example.fundatecheroesti21
+package br.com.fundatec.fundatecheroes
 
 import org.junit.Test
 
