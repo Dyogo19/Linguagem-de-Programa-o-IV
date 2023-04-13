@@ -12,4 +12,5 @@
     <string name="confirmarSenha">Confirmar Senha</string>
     <string name="registrar">Registrar</string>
     <string name="sbv">Seja bem-vindo %s</string>
+    <string name="hello">Olá %s </string>
 </resources>
