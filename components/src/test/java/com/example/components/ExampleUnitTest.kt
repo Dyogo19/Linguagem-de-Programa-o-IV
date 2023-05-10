@@ -1,4 +1,4 @@
-package com.example.fundatecheroesti21
+package com.example.components
 
 import org.junit.Test
 
