@@ -13,7 +13,7 @@ class LoginViewModel : ViewModel() {
 
     fun validateInputs(email: String?, password: String?) {
         var patternEmail = Pattern.compile("^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$")
-        var patternSenha = Pattern.compile("^.{0,15}$")
+        var patternSenha = Pattern.compile("^.{4,}$")
 
         var matcherEmail = patternEmail.matcher(email)
         var matcherSenha = patternSenha.matcher(password)
