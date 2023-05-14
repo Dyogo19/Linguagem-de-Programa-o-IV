@@ -1,56 +1,55 @@
-package br.com.fundatec.fundatecheroes.login
+package br.com.fundatec.fundatecheroes.profile
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
 import br.com.fundatec.fundatecheroes.R
-import br.com.fundatec.fundatecheroes.databinding.ActivityLoginBinding
-import br.com.fundatec.fundatecheroes.login.model.LoginViewState
-import br.com.fundatec.fundatecheroes.profile.ProfileActivity
+
+import br.com.fundatec.fundatecheroes.databinding.ActivityProfileBinding
+
+
+import br.com.fundatec.fundatecheroes.profile.model.ProfileViewState
 import br.com.fundatec.fundatecheroes.home.HomeActivity
 import com.example.module.components.hide
 import com.example.module.components.show
 import com.google.android.material.snackbar.Snackbar
 
+class ProfileActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityProfileBinding
 
-
-class LoginActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityLoginBinding
-
-    private val viewModel: LoginViewModel by viewModels()
+    private val viewModel: ProfileViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
-        binding = ActivityLoginBinding.inflate(layoutInflater)
+        binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
 
         initializeObserver()
 
-        binding.btLogin.setOnClickListener {
-            viewModel.validateInputs(
+        binding.registrar.setOnClickListener {
+            viewModel.validateInputsRegistrer(
                 password = binding.pwd.text.toString(),
                 email = binding.email.text.toString(),
 
-            )
-        }
 
-        binding.novo.setOnClickListener{
-            showNovo()
-        }
+
+                )}
+
     }
 
     private fun initializeObserver() {
         viewModel.state.observe(this) { viewState ->
             when (viewState) {
-                LoginViewState.ShowHomeScreen -> showHome()
-                LoginViewState.ShowErrorMessage -> showSnackError()
-                LoginViewState.ShowEmailErrorMessage -> showEmailError()
-                LoginViewState.ShowPasswordErrorMessage -> showPasswordError()
-                LoginViewState.ShowLoading -> showLoading()
+                ProfileViewState.ShowHomeScreen -> showHome()
+                ProfileViewState.ShowErrorMessage -> showSnackError()
+                ProfileViewState.ShowEmailErrorMessage -> showEmailError()
+                ProfileViewState.ShowPasswordErrorMessage -> showPasswordError()
+                ProfileViewState.ShowLoading -> showLoading()
+
 
             }
         }
@@ -79,16 +78,15 @@ class LoginActivity : AppCompatActivity() {
 
     private fun showHome() {
         binding.pbLoading.hide()
-        val intent = Intent(this@LoginActivity, HomeActivity::class.java)
-        startActivity(intent)
-        finish()
-    }
-
-    private fun showNovo(){
-        binding.pbLoading.hide()
-        val intent = Intent (this@LoginActivity, ProfileActivity::class.java)
+        val intent = Intent(this@ProfileActivity, HomeActivity::class.java)
         startActivity(intent)
         finish()
     }
 
 }
+
+
+
+
+
+

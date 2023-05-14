@@ -87,7 +87,8 @@
                 android:layout_marginHorizontal="40dp"
                 android:hint="@string/senha"
                 android:imeOptions="actionDone"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:maxLength="16"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
